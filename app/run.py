@@ -42,7 +42,7 @@ def index():
     genre_names = list(genre_counts.index)
     
     category_names = df.iloc[:,4:].columns
-    category_boolean = (df.iloc[:,4:] != 0).sum().values
+    category_counts = (df.iloc[:,4:] != 0).sum().values
     
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
@@ -80,7 +80,7 @@ def index():
             }
         },
         
-        # GRAPH 2 - category graph
+        # Graph 2 - category graph
         #Reference: https://plot.ly/~C_Sevigny/4#plot
         {
   "data": [
@@ -89,7 +89,7 @@ def index():
       "line": {},
       "name": "Col2",
       "type": "bar",
-      "x": category_boolean,
+      "x": category_counts,
       "y":category_names,
       "marker": {
         "line": {
