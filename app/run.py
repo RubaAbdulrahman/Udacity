@@ -47,7 +47,7 @@ def index():
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
-        {
+        {#Graph 1
             "data": [
     {
       "uid": "a089bd",
@@ -80,16 +80,16 @@ def index():
             }
         },
         
-        # Graph 2 - category graph
+        # Graph 2 
         #Reference: https://plot.ly/~C_Sevigny/4#plot
         {
-  "data": [
+            "data": [
     {
       "uid": "a089bd",
       "line": {},
       "name": "Col2",
       "type": "bar",
-      "x": category_counts,
+      "x":category_counts,
       "y":category_names,
       "marker": {
         "line": {
@@ -103,159 +103,17 @@ def index():
       "orientation": "h"
     }
   ],
-  "layout": {
-    "font": {
-      "size": 12,
-      "color": "rgb(33, 33, 33)",
-      "family": "Raleway, sans-serif"
-    },
-    "smith": False,
-    "title": "<br>Distribution of Message Categories",
-    "width": 800,
-    "xaxis": {
-      "type": "linear",
-      "dtick": 20000,
-      "range": [
-        0,
-        103741.05263157895
-      ],
-      "tick0": 0,
-      "ticks": "",
-      "title": "<br><i>Data:Message data for disaster response</i>",
-      "anchor": "y",
-      "domain": [
-        0,
-        1
-      ],
-      "mirror": False,
-      "nticks": 0,
-      "ticklen": 5,
-      "autotick": True,
-      "position": 0,
-      "showgrid": True,
-      "showline": False,
-      "tickfont": {
-        "size": 0,
-        "color": "",
-        "family": ""
-      },
-      "zeroline": False,
-      "autorange": True,
-      "gridcolor": "rgb(255, 255, 255)",
-      "gridwidth": 1,
-      "linecolor": "#000",
-      "linewidth": 1,
-      "rangemode": "normal",
-      "tickangle": 40,
-      "tickcolor": "#000",
-      "tickwidth": 1,
-      "titlefont": {
-        "size": 0,
-        "color": "",
-        "family": ""
-      },
-      "overlaying": False,
-      "showexponent": "all",
-      "zerolinecolor": "#000",
-      "zerolinewidth": 1,
-      "exponentformat": "none",
-      "showticklabels": True
-    },
-    "yaxis": {
-      "type": "category",
-      "dtick": 1,
-      "range": [
-        -0.5,
-        12.5
-      ],
-      "tick0": 0,
-      "ticks": "",
-      "title": "",
-      "anchor": "x",
-      "domain": [
-        0,
-        1
-      ],
-      "mirror": False,
-      "nticks": 0,
-      "ticklen": 5,
-      "autotick": True,
-      "position": 0,
-      "showgrid": False,
-      "showline": False,
-      "tickfont": {
-        "size": 0,
-        "color": "",
-        "family": ""
-      },
-      "zeroline": False,
-      "autorange": True,
-      "gridcolor": "#ddd",
-      "gridwidth": 1,
-      "linecolor": "#000",
-      "linewidth": 1,
-      "rangemode": "normal",
-      "tickangle": "auto",
-      "tickcolor": "#000",
-      "tickwidth": 1,
-      "titlefont": {
-        "size": 0,
-        "color": "",
-        "family": ""
-      },
-      "overlaying": False,
-      "showexponent": "all",
-      "zerolinecolor": "#000",
-      "zerolinewidth": 1,
-      "exponentformat": "e",
-      "showticklabels": True
-    },
-    "bargap": 0.36,
-    "boxgap": 0.3,
-    "height": 600,
-    "legend": {
-      "x": 1.02,
-      "y": 1,
-      "font": {
-        "size": 0,
-        "color": "",
-        "family": ""
-      },
-      "bgcolor": "#fff",
-      "xanchor": "left",
-      "yanchor": "top",
-      "traceorder": "normal",
-      "bordercolor": "#000",
-      "borderwidth": 1
-    },
-    "margin": {
-      "b": 80,
-      "l": 320,
-      "r": 80,
-      "t": 80,
-      "pad": 0,
-      "autoexpand": True
-    },
-    "barmode": "stack",
-    "boxmode": "overlay",
-    "autosize": False,
-    "dragmode": "zoom",
-    "hovermode": "x",
-    "titlefont": {
-      "size": 0,
-      "color": "",
-      "family": ""
-    },
-    "separators": ".,",
-    "showlegend": False,
-    "bargroupgap": 0.02,
-    "boxgroupgap": 0.3,
-    "hidesources": False,
-    "plot_bgcolor": "rgba(102, 102, 102, 0.18)",
-    "paper_bgcolor": "rgb(255, 255, 255)"
-  },
-  "frames": []
-}
+
+            'layout': {
+                'title': 'Distribution of Message Categories',
+                'yaxis': {
+                    'title': "Categories"
+                },
+                'xaxis': {
+                    'title': "Count"
+                }
+            }
+        }
     ]
     
     
