@@ -30,4 +30,4 @@ This will start the web app and will direct you to a URL where you can enter mes
 
 #### Software Requirements
 
-This project uses **Python 3.6.6** and the necessary libraries are mentioned in _requirements.txt_.
+This project uses **Python 3.6.6**.
