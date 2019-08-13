@@ -93,7 +93,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
         Y_test: True lables for Test data
         category_names: Labels for 36 categories
     Output:
-        Print accuracy and classfication report for each category
+        Print evaluation report for each category
     '''
     Y_pred = model.predict(X_test)
     
