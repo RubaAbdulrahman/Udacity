@@ -30,4 +30,4 @@ This will start the web app that will predict and classify the message.
 
 #### Software Requirements
 
-This project uses **Python 3.6.6**.
+This project uses **Python 3**.
