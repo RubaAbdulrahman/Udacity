@@ -16,7 +16,7 @@ After the data cleaning process, run this command:
 python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 ```
 
-Now that we have cleaned the data and trained our model. Now it's time to see the prediction in a user friendly way.
+So we have cleaned the data and trained our model. to run the Wep App
 
 **Go the app directory** and run the following command:
 
@@ -26,7 +26,7 @@ Now that we have cleaned the data and trained our model. Now it's time to see th
 python run.py
 ```
 
-This will start the web app and will direct you to a URL where you can enter messages and get classification results for it.
+This will start the web app that will pridict and classify the message.
 
 #### Software Requirements
 
