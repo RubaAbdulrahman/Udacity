@@ -34,7 +34,7 @@ def load_data(database_filepath):
     Output:
         X: Message data (features)
         Y: Categories (target)
-        categories: Labels for 36 categories
+        categories:categories names
     '''
     engine = create_engine('sqlite:///' + database_filepath)
     df = pd.read_sql_table('DisasterMessages', engine)
@@ -73,7 +73,7 @@ def tokenize(text):
 
 def build_model():
     """
-    Build Model function
+    Build Model function using Scikit ML Pipeline
     
     Output:Scikit ML Pipeline to process text messages and apply a classifier
     """
