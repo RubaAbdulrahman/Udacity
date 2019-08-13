@@ -79,7 +79,9 @@ def index():
                 }
             }
         },
+        
         # GRAPH 2 - category graph
+        #Reference: https://plot.ly/~C_Sevigny/4#plot
         {
   "data": [
     {
