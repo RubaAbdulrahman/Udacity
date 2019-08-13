@@ -26,7 +26,7 @@ So we have cleaned the data and trained our model. to run the Wep App
 python run.py
 ```
 
-This will start the web app that will pridict and classify the message.
+This will start the web app that will predict and classify the message.
 
 #### Software Requirements
 
