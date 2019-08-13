@@ -31,3 +31,8 @@ This will start the web app that will predict and classify the message.
 #### Software Requirements
 
 This project uses **Python 3**.
+
+#### References
+<a href="https://www.udacity.com/course/data-scientist-nanodegree--nd025" target="_blank">Data Science Nanodgree</a> 
+<a href="https://github.com/matteobonanomi/dsnd-disaster-response" target="_blank">Disaster Response</a>
+
