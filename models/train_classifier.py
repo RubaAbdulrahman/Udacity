@@ -58,7 +58,8 @@ def tokenize(text):
     lemmatizer = WordNetLemmatizer()
     # tokenize text
     tokens = word_tokenize(text)
-    
+    # remove short words
+    tokens = [token for token in tokens if len(token) > 2]
     # lemmatize andremove stop words
     tokens = [lemmatizer.lemmatize(word) for word in tokens if word not in stop_words]
 
@@ -75,14 +76,25 @@ def build_model():
     """
     Build Model function using Scikit ML Pipeline
     
-    Output:Scikit ML Pipeline to process text messages and apply a classifier
+    Output:Result of GridSearchCV Pipeline to process text messages and apply a classifier
     """
-    model = Pipeline([
+    pipeline = Pipeline([
                         ('vect', CountVectorizer(tokenizer=tokenize)),
                         ('tfidf', TfidfTransformer()),
                         ('clf', MultiOutputClassifier(RandomForestClassifier()))
                         ])   
-    return model
+    
+    # hyper-parameter grid
+    param_grid = {
+        'vect__ngram_range': ((1, 1), (2, 2)),
+        'vect__max_df': (0.5, 0.75, 1.0),
+        'clf__estimator__min_samples_split': [2,3, 4],
+        'clf__estimator__n_estimators': [50, 100]
+    }
+
+    # create model 
+    cv = GridSearchCV(pipeline, param_grid=param_grid, verbose=2, n_jobs=4, cv=3)
+    return cv
 
 def evaluate_model(model, X_test, Y_test, category_names):
     '''
